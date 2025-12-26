@@ -28,6 +28,26 @@
   </style>
 </head>
 <body>
+  <h2>Tambah Saudara</h2>
+<input type="text" id="siblingName" placeholder="Nama saudara baru">
+<button onclick="addSibling()">Tambah</button>
+
+<ul id="siblingList">
+  <li>Aa Chalikul Hafidz</li>
+  <li>Kaka Khoirunnisa Nurul Hidayah</li>
+</ul>
+
+<script>
+function addSibling() {
+  const name = document.getElementById("siblingName").value;
+  if (name) {
+    const li = document.createElement("li");
+    li.textContent = name;
+    document.getElementById("siblingList").appendChild(li);
+    document.getElementById("siblingName").value = "";
+  }
+}
+</script>
   <header>
     <h1>Static Family Tree</h1>
     <p>Menampilkan keluarga: kamu, saudara/i, ayah-ibu, kakek-nenek.</p>
