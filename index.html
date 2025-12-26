@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Static Family Tree</title>
+  <style>
+    :root {
+      --bg: #f9fafb; --card: #ffffff; --text: #354568; --muted: #5cad7e; --accent: #2563eb;
+      --line: #e6509b;
+    }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--text); margin: 0; }
+    header { padding: 16px; text-align: center; background: #fff; border-bottom: 1px solid var(--line); }
+    header h1 { margin: 0 0 6px; font-size: 20px; }
+    header p { margin: 0; color: var(--muted); font-size: 14px; }
+    .container { max-width: 980px; margin: 20px auto; padding: 0 16px; }
+    .tree { display: flex; justify-content: center; overflow-x: auto; padding: 16px; }
+    .node { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; text-align: center; min-width: 140px; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .name { font-weight: 600; }
+    .role { font-size: 12px; color: var(--muted); }
+    .row { display: flex; gap: 16px; align-items: flex-start; justify-content: center; flex-wrap: wrap; margin: 12px 0; }
+    .line { width: 2px; background: var(--line); margin: 8px auto; height: 16px; }
+    .connector { border-top: 2px solid var(--line); height: 0; margin: 0 8px; }
+    @media (max-width: 640px) {
+      .node { min-width: 120px; }
+      .row { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Static Family Tree</h1>
+    <p>Menampilkan keluarga: kamu, saudara/i, ayah-ibu, kakek-nenek.</p>
+  </header>
+
+  <div class="container">
+    <!-- Kakek-nenek dari AYAH -->
+    <div class="row">
+      <div class="node">
+        <div class="name">Lapanggoto</div>
+        <div class="role">Kakek (Ayah)</div>
+      </div>
+      <div class="node">
+        <div class="name">Itape</div>
+        <div class="role">Nenek (Ayah)</div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <!-- Ayah -->
+    <div class="row">
+      <div class="node">
+        <div class="name">Gozali Rahman</div>
+        <div class="role">Ayah</div>
+      </div>
+    </div>
+    <div class="line"></div>
+
+    <!-- Kakek-nenek dari MAMAH -->
+    <div class="row">
+      <div class="node">
+        <div class="name">Encu Samsudin</div>
+        <div class="role">Kakek (Mamah)</div>
+      </div>
+      <div class="node">
+        <div class="name">Kuraisin</div>
+        <div class="role">Nenek (Mamah)</div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <!-- Mamah -->
+    <div class="row">
+      <div class="node">
+        <div class="name">Iim Masripah</div>
+        <div class="role">Mamah</div>
+      </div>
+    </div>
+    <div class="line"></div>
+
+    <!-- Anak-anak (saudara kandung) -->
+    <div class="row">
+      <div class="node">
+        <div class="name">Risma Nur Aisyatu Salma</div>
+        <div class="role">Saya</div>
+      </div>
+      <div class="node">
+        <div class="name">Aa Chalikul Hafidz</div>
+        <div class="role">Saudara laki laki</div>
+      </div>
+      <div class="node">
+        <div class="name">Kaka Khoirunnisa Nurul Hidayah</div>
+        <div class="role">Saudara</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
